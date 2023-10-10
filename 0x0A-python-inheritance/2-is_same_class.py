@@ -5,6 +5,7 @@
 
 
 def is_same_class(obj, a_class):
+
     """ Function that returns True if obj is exactly,
     and False if otherwise.
 
