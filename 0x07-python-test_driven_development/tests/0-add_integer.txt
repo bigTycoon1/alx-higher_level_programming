@@ -1,8 +1,6 @@
 # 0-add_integer.txt
 
 
-``add_integer(...)``` function that returns the addition of two arguments.
-
     >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(2, 3)
     5

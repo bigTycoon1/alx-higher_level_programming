@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
-"""An integer addition function."""
+
+"""this module write a function that add an int."""
 
 
 def add_integer(a, b=98):
+
     """function that define integer addition of a and b.
 
     Float arguments are typecasted to integer,
