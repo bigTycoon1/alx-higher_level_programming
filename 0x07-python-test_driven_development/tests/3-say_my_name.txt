@@ -1,13 +1,8 @@
 # 3-say_my_name.txt
 
-===========================
-ways of Using 3-say_my_name.py
-===========================
 
 Function that defines ``say_my_name(first_name, last_name="")``.
 
-Usage
-=====
 
 ``say_my_name(...)`` functions that prints "My name is <first_name> <last_name>".
 

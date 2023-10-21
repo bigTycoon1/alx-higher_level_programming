@@ -1,8 +1,5 @@
 # 5-text_indentation.txt
 
-================================
-Ways of Using 5-text_indentation.py
-================================
 
 A text-indentation function ``text_indentation(text)``.
 

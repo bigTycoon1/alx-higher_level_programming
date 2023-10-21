@@ -1,13 +1,5 @@
 # 4-print_square.txt
 
-============================
-ways of use 4-print_square.py
-============================
-
-Function that defines a square-printing function ``print_square(size)``.
-
-Usage
-=====
 
 The squares are printed using the ``#`` character. while the parameter ``size``
 represents the height and width of the square.
