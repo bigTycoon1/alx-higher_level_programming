@@ -1,7 +1,7 @@
 The ``1-my_list`` module
 
 
-Import the function from the module:
+Try Importing the function from the module:
     >>> MyList = __import__('1-my_list').MyList
 
 

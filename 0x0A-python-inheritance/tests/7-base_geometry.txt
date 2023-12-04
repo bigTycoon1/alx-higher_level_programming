@@ -1,7 +1,7 @@
 The ``7-base_geometry`` module
 
 
-Import class from the module:
+Try Importing class from the module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
