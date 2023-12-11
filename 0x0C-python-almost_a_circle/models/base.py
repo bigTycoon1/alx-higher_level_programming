@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """ Module that create a class Base """
+=======
+
+
+""" Module that contains base of class """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
 import json
 import csv
 import os.path
@@ -10,7 +16,11 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+<<<<<<< HEAD
         """ Instance to be initializes """
+=======
+        """ Instance to Initialize """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         if id is not None:
             self.id = id
         else:
@@ -19,14 +29,22 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+<<<<<<< HEAD
         """ Lists of list to JSON str """
+=======
+        """ List dict to JSON str """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         if list_dictionaries is None or list_dictionaries == "[]":
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+<<<<<<< HEAD
         """ Save to file obj """
+=======
+        """ List to save object to file """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         filename = "{}.json".format(cls.__name__)
         list_dic = []
 
@@ -43,14 +61,22 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+<<<<<<< HEAD
         """ From JSON str to dict """
+=======
+        """ JSON str to dict """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         if not json_string:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+<<<<<<< HEAD
         """ Instance that is created """
+=======
+        """ Create an instance """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         if cls.__name__ == "Rectangle":
             new = cls(10, 10)
         else:
@@ -60,7 +86,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+<<<<<<< HEAD
         """ Returns an instances lists """
+=======
+        """ Returns list of an instances """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename) is False:
@@ -79,7 +109,11 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+<<<<<<< HEAD
         """ Method that save ti file_csv """
+=======
+        """ Method that save a CSV file """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         filename = "{}.csv".format(cls.__name__)
 
         if cls.__name__ == "Rectangle":
@@ -105,7 +139,11 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+<<<<<<< HEAD
         """ Method that load from csv file """
+=======
+        """ Method that loads a CSV file """
+>>>>>>> 44775a1d1336c9aea28adfaec5a9674d363394a3
         filename = "{}.csv".format(cls.__name__)
 
         if os.path.exists(filename) is False:
