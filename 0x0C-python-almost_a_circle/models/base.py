@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-""" Module contains the  class Base """
+""" Module that contains the  class Base """
 import json
 import csv
 import os.path
