@@ -15,21 +15,21 @@ class TestBaseMethods(unittest.TestCase):
     """ def test Base class """
 
     def setUp(self):
-        """ Method set for each test """
+        """ function to set up for each test """
         Base._Base__nb_objects = 0
 
     def test_id(self):
-        """ Test_id assign """
+        """ test_id assign """
         new = Base(1)
         self.assertEqual(new.id, 1)
 
     def test_id_default(self):
-        """ Test_id default """
+        """ test default id """
         new = Base()
         self.assertEqual(new.id, 1)
 
     def test_id_nb_objects(self):
-        """ Test_id_nb object attribute """
+        """ test nb object attr """
         new = Base()
         new2 = Base()
         new3 = Base()
@@ -38,7 +38,7 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new3.id, 3)
 
     def test_id_mix(self):
-        """ Test object attributes and assign id """
+        """ test nb obj attr and assign id """
         new = Base()
         new2 = Base(1024)
         new3 = Base()
@@ -47,23 +47,23 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new3.id, 2)
 
     def test_string_id(self):
-        """ Test_id str """
+        """ test str id """
         new = Base('1')
         self.assertEqual(new.id, '1')
 
     def test_more_args_id(self):
-        """ Test_id to pass more args """
+        """ test to pass more args """
         with self.assertRaises(TypeError):
             new = Base(1, 1)
 
     def test_access_private_attrs(self):
-        """ Test to access private attrs """
+        """ test to access private attrs """
         new = Base()
         with self.assertRaises(AttributeError):
             new.__nb_objects
 
     def test_save_to_file_1(self):
-        """ Test JSON file """
+        """ test to save file """
         Square.save_to_file(None)
         res = "[]\n"
         with open("Square.json", "r") as file:
@@ -81,7 +81,7 @@ class TestBaseMethods(unittest.TestCase):
             self.assertEqual(file.read(), "[]")
 
     def test_save_to_file_2(self):
-        """ Test JSON file """
+        """ test to save file """
         Rectangle.save_to_file(None)
         res = "[]\n"
         with open("Rectangle.json", "r") as file:
