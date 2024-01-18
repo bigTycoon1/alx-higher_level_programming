@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 
 
-""" Module that contains base of class """
+""" Module that contains the  class Base """
 import json
 import csv
 import os.path
 
 
 class Base:
-    """ Class Base """
+    """ Base Class """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ Instance to Initialize """
+        """ Instance to initializes """
         if id is not None:
             self.id = id
         else:
@@ -21,14 +21,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ List dict to JSON str """
+        """ def to JSON string list """
         if list_dictionaries is None or list_dictionaries == "[]":
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ List to save object to file """
+        """ Save to file obj """
         filename = "{}.json".format(cls.__name__)
         list_dic = []
 
@@ -45,14 +45,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ JSON str to dict """
+        """ def from JSON str to dict """
         if not json_string:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """ Create an instance """
+        """ instance to create """
         if cls.__name__ == "Rectangle":
             new = cls(10, 10)
         else:
@@ -62,7 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ Returns list of an instances """
+        """ Returns an instances list """
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename) is False:
@@ -81,7 +81,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """ Method that save a CSV file """
+        """ Method to saves a CSV file """
         filename = "{}.csv".format(cls.__name__)
 
         if cls.__name__ == "Rectangle":
@@ -107,7 +107,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """ Method that loads a CSV file """
+        """ Method to loads a CSV file """
         filename = "{}.csv".format(cls.__name__)
 
         if os.path.exists(filename) is False:

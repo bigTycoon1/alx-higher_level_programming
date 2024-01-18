@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 
 
+<<<<<<< HEAD
 """ Module for Rectangle Class Tests """
+=======
+""" Module for test Rectangle class """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
 import unittest
 from io import StringIO
 from unittest import TestCase
@@ -14,7 +18,11 @@ class TestRectangleMethods(unittest.TestCase):
     """ Function to test Rectangle class """
 
     def setUp(self):
+<<<<<<< HEAD
         """ Method instance for each test """
+=======
+        """ Instance method for each test """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         Base._Base__nb_objects = 0
 
     def test_new_rectangle(self):
@@ -27,7 +35,11 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(new.id, 1)
 
     def test_new_rectangle_2(self):
+<<<<<<< HEAD
         """ test new rectangle with all attrs """
+=======
+        """ test new rectangle """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(2, 3, 5, 5, 4)
         self.assertEqual(new.width, 2)
         self.assertEqual(new.height, 3)
@@ -48,86 +60,150 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(True, isinstance(new, Base))
 
     def test_incorrect_amount_attrs(self):
+<<<<<<< HEAD
         """ test incorrect raise with 1 arg passed """
+=======
+        """ test incorrecte with a arg passed """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Rectangle(1)
 
     def test_incorrect_amount_attrs_1(self):
+<<<<<<< HEAD
         """ test incorrect raised with no args passed """
+=======
+        """ test incorect args passed """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Rectangle()
 
     def test_access_private_attrs(self):
+<<<<<<< HEAD
         """ test to access to a private attribute """
+=======
+        """ test to access private attribute """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(1, 1)
         with self.assertRaises(AttributeError):
             new.__width
 
     def test_access_private_attrs_2(self):
+<<<<<<< HEAD
         """ test to access to a private attribute """
+=======
+        """ test to access private attribute """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(1, 1)
         with self.assertRaises(AttributeError):
             new.__height
 
     def test_access_private_attrs_3(self):
+<<<<<<< HEAD
         """ test to access to a private attribute """
+=======
+        """ test to access private attribute """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(1, 1)
         with self.assertRaises(AttributeError):
             new.__x
 
     def test_access_private_attrs_4(self):
+<<<<<<< HEAD
         """ test to access to a private attribute """
+=======
+        """ test to access private attribute """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(1, 1)
         with self.assertRaises(AttributeError):
             new.__y
 
     def test_valide_attrs(self):
+<<<<<<< HEAD
         """ test valide attr """
+=======
+        """ test valid attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Rectangle("2", 2, 2, 2, 2)
 
     def test_valide_attrs_2(self):
+<<<<<<< HEAD
         """ test valide attr """
+=======
+        """ test valid attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Rectangle(2, "2", 2, 2, 2)
 
     def test_valide_attrs_3(self):
+<<<<<<< HEAD
         """ test valide attribute """
+=======
+        """ test valid attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Rectangle(2, 2, "2", 2, 2)
 
     def test_valide_attrs_4(self):
+<<<<<<< HEAD
         """ tets valide attribute """
+=======
+        """ test valid attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Rectangle(2, 2, 2, "2", 2)
 
     def test_value_attrs(self):
+<<<<<<< HEAD
         """ test value attributes """
+=======
+        """ test values attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(ValueError):
             new = Rectangle(0, 1)
 
     def test_value_attrs_1(self):
+<<<<<<< HEAD
         """ test value attribute """
+=======
+        """ test values attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(ValueError):
             new = Rectangle(1, 0)
 
     def test_value_attrs_2(self):
+<<<<<<< HEAD
         """ test value attribute """
+=======
+        """ test value attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(ValueError):
             new = Rectangle(1, 1, -1)
 
     def test_value_attrs_3(self):
+<<<<<<< HEAD
         """ test value attribute """
+=======
+        """ test value attr """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(ValueError):
             new = Rectangle(1, 1, 1, -1)
 
     def test_area(self):
+<<<<<<< HEAD
         """ Check the return value of test area """
+=======
+        """ test the value of area method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(4, 5)
         self.assertEqual(new.area(), 20)
 
     def test_area_2(self):
+<<<<<<< HEAD
         """ Check the return value of test area """
+=======
+        """ test the value of area method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(2, 2)
         self.assertEqual(new.area(), 4)
         new.width = 5
@@ -136,14 +212,22 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(new.area(), 25)
 
     def test_area_3(self):
+<<<<<<< HEAD
         """ Check the return value of test area """
+=======
+        """ test the value of area method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Rectangle(3, 8)
         self.assertEqual(new.area(), 24)
         new2 = Rectangle(10, 10)
         self.assertEqual(new2.area(), 100)
 
     def test_display(self):
+<<<<<<< HEAD
         """ Test str displayed """
+=======
+        """ test str display printed """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         r1 = Rectangle(2, 5)
         res = "##\n##\n##\n##\n##\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
@@ -151,7 +235,11 @@ class TestRectangleMethods(unittest.TestCase):
             self.assertEqual(str_out.getvalue(), res)
 
     def test_display_2(self):
+<<<<<<< HEAD
         """ test str displsyed """
+=======
+        """ test str display printed """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         r1 = Rectangle(2, 2)
         res = "##\n##\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
@@ -215,7 +303,11 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(r1.__str__(), res)
 
     def test_display_3(self):
+<<<<<<< HEAD
         """ test str displayed """
+=======
+        """ test str display printed """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         r1 = Rectangle(5, 4, 1, 1)
         res = "\n #####\n #####\n #####\n #####\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
@@ -223,7 +315,11 @@ class TestRectangleMethods(unittest.TestCase):
             self.assertEqual(str_out.getvalue(), res)
 
     def test_display_4(self):
+<<<<<<< HEAD
         """ test str displayed """
+=======
+        """ test str display printed """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         r1 = Rectangle(3, 2)
         res = "###\n###\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
@@ -291,7 +387,11 @@ class TestRectangleMethods(unittest.TestCase):
             self.assertEqual(str_out.getvalue(), res)
 
     def test_dict_to_json(self):
+<<<<<<< HEAD
         """ test dict to JSON str """
+=======
+        """ test dictionary to JSON """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         r1 = Rectangle(2, 2)
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
@@ -302,30 +402,50 @@ class TestRectangleMethods(unittest.TestCase):
             self.assertEqual(str_out.getvalue(), res.replace("'", "\""))
 
     def test_check_value(self):
+<<<<<<< HEAD
         """ test check value """
+=======
+        """ check test value """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(ValueError):
             r1 = Rectangle(-1, 2)
 
     def test_check_value_2(self):
+<<<<<<< HEAD
         """ test check value """
+=======
+        """ check test value """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(ValueError):
             r1 = Rectangle(1, -2)
 
     def test_create(self):
+<<<<<<< HEAD
         """ test to create """
+=======
+        """ create test method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         dictionary = {'id': 89}
         r1 = Rectangle.create(**dictionary)
         self.assertEqual(r1.id, 89)
 
     def test_create_2(self):
+<<<<<<< HEAD
         """ test to create """
+=======
+        """ create test method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         dictionary = {'id': 89, 'width': 1}
         r1 = Rectangle.create(**dictionary)
         self.assertEqual(r1.id, 89)
         self.assertEqual(r1.width, 1)
 
     def test_create_3(self):
+<<<<<<< HEAD
         """ test to create """
+=======
+        """ create test method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         dictionary = {'id': 89, 'width': 1, 'height': 2}
         r1 = Rectangle.create(**dictionary)
         self.assertEqual(r1.id, 89)
@@ -333,7 +453,11 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(r1.height, 2)
 
     def test_create_4(self):
+<<<<<<< HEAD
         """ test to create """
+=======
+        """ create test method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         dictionary = {'id': 89, 'width': 1, 'height': 2, 'x': 3}
         r1 = Rectangle.create(**dictionary)
         self.assertEqual(r1.id, 89)
@@ -342,7 +466,11 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(r1.x, 3)
 
     def test_create_5(self):
+<<<<<<< HEAD
         """ test to create """
+=======
+        """ create test method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         dictionary = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
         r1 = Rectangle.create(**dictionary)
         self.assertEqual(r1.id, 89)
@@ -357,7 +485,11 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(load_file, [])
 
     def test_load_from_file_2(self):
+<<<<<<< HEAD
         """ test load frm file """
+=======
+        """ test load from file """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         r1 = Rectangle(5, 5)
         r2 = Rectangle(8, 2, 5, 5)
 

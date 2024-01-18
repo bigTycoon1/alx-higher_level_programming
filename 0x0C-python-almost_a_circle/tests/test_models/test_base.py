@@ -12,14 +12,18 @@ from unittest.mock import patch
 
 
 class TestBaseMethods(unittest.TestCase):
-    """ def test Base class """
+    """ def test Class Base """
 
     def setUp(self):
         """ function to set up for each test """
         Base._Base__nb_objects = 0
 
     def test_id(self):
+<<<<<<< HEAD
         """ test_id assign """
+=======
+        """ test_id to assign """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Base(1)
         self.assertEqual(new.id, 1)
 
@@ -29,7 +33,11 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new.id, 1)
 
     def test_id_nb_objects(self):
+<<<<<<< HEAD
         """ test nb object attr """
+=======
+        """ test id for nb object """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Base()
         new2 = Base()
         new3 = Base()
@@ -38,7 +46,11 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new3.id, 3)
 
     def test_id_mix(self):
+<<<<<<< HEAD
         """ test nb obj attr and assign id """
+=======
+        """ test nb obj attrs and assigned id """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Base()
         new2 = Base(1024)
         new3 = Base()
@@ -52,12 +64,20 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(new.id, '1')
 
     def test_more_args_id(self):
+<<<<<<< HEAD
         """ test to pass more args """
+=======
+        """ test for more args method """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         with self.assertRaises(TypeError):
             new = Base(1, 1)
 
     def test_access_private_attrs(self):
+<<<<<<< HEAD
         """ test to access private attrs """
+=======
+        """ test to access private attributes """
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
         new = Base()
         with self.assertRaises(AttributeError):
             new.__nb_objects
