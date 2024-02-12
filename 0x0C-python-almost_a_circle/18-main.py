@@ -39,3 +39,7 @@ if __name__ == "__main__":
 
     for square in list_squares_output:
         print("[{}] {}".format(id(square), square))
+<<<<<<< HEAD
+
+=======
+>>>>>>> 88dac1071010022a96e0b707f37f7b844c32b927
