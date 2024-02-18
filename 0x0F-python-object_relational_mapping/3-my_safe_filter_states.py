@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script function that takes in argument and displays all values in MYSQL injections"""
+"""script function to takes in arg and displays all values in MYSQL inj"""
 import MySQLdb
 import sys
 
