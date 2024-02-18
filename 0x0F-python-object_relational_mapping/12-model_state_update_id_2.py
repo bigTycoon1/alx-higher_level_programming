@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 
-"""Script that lists all State objects that contains
-letter a from the database hbtn_0e_6_usa"""
+"""Script that changes the name of State object from the database"""
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -16,8 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    result = session.query(State).filter(State.name.like('%a%')) \
-                 .order_by(State.id)
-    for row in result:
-        print(f"{row.id}: {row.name}")
+    result = session.query(State).filter(State.id == 2) \
+                 .update({"name": "New Mexico"}, synchronize_session='fetch')
+    session.commit()
     session.close()
