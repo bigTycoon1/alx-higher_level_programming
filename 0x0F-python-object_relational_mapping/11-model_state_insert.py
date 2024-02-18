@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 
-"""Script that prints the first State object from the database hbtn_0e_6_usa"""
+"""Script that adds the State object "Louisiana"
+to the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -15,9 +16,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    result = session.query(State).first()
-    if result:
-        print(f"{result.id}: {result.name}")
-    else:
-        print("Nothing")
+    state = State(name="Louisiana")
+    session.add(state)
+    session.commit()
+    print(f"{state.id}")
     session.close()

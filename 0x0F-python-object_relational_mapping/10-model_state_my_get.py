@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 
-"""Script that prints the first State object from the database hbtn_0e_6_usa"""
+"""Script that prints the State object with the name
+passed as argument from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -15,9 +16,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    result = session.query(State).first()
+    result = session.query(State).filter_by(name=sys.argv[4]).first()
     if result:
-        print(f"{result.id}: {result.name}")
+        print(f"{result.id}")
     else:
-        print("Nothing")
+        print("Not found")
     session.close()
